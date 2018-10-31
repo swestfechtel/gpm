@@ -31,9 +31,9 @@
         <bpmn:flowNodeRef>EndEvent_16rn8jo</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_1e7l7om</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_0nfai84</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_0gsj03c</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_00aq93m</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_12eds2b</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0gsj03c</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_0pktsvx</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_1hrs6fc</bpmn:flowNodeRef>
         <bpmn:childLaneSet id="LaneSet_0j5zfb7" />
@@ -45,21 +45,21 @@
         <bpmn:flowNodeRef>Task_0q9iei4</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_0itwvzp</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_0cjjgwr</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_0ca4ag0</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_0lu2ibh</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_1hnx72n</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_1nj1znw</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_1wmz8qt</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_0r0owul</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>BoundaryEvent_1lkcpri</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_029mbcz</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_1887iuj</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_0x039r8</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_03ou1fh</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>Task_0tultsb</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>BoundaryEvent_1ewdrdx</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_1n19dv9</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>Task_1thzjrx</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0ca4ag0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>BoundaryEvent_1lkcpri</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0lu2ibh</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0tultsb</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>BoundaryEvent_1ewdrdx</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_19jfb2k" name="Prüfer">
         <bpmn:flowNodeRef>Task_01l8jlp</bpmn:flowNodeRef>
@@ -156,25 +156,12 @@
       <bpmn:incoming>SequenceFlow_063vh98</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_142esrq</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:task id="Task_0ca4ag0" name="Weiter an der Bachelorarbeit schreiben">
-      <bpmn:incoming>SequenceFlow_1d4odx1</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0rdawhk</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Task_0lu2ibh" name="Bachelorarbeit abgeben">
-      <bpmn:incoming>SequenceFlow_1attj93</bpmn:incoming>
-      <bpmn:incoming>SequenceFlow_13z8xfw</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_13c1et2</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:exclusiveGateway id="ExclusiveGateway_1hnx72n">
       <bpmn:incoming>SequenceFlow_07ktvzs</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_0rdawhk</bpmn:incoming>
       <bpmn:incoming>SequenceFlow_1clzdao</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_13z8xfw</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:boundaryEvent id="BoundaryEvent_1lkcpri" name="Max. 4 Wochen" attachedToRef="Task_0ca4ag0">
-      <bpmn:outgoing>SequenceFlow_1clzdao</bpmn:outgoing>
-      <bpmn:timerEventDefinition id="TimerEventDefinition_0nqqyrg" />
-    </bpmn:boundaryEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0zjt92q" sourceRef="Task_0tultsb" targetRef="ExclusiveGateway_1n19dv9" />
     <bpmn:sequenceFlow id="SequenceFlow_1fatxs3" name="JA" sourceRef="ExclusiveGateway_1n19dv9" targetRef="Task_1thzjrx" />
     <bpmn:sequenceFlow id="SequenceFlow_07ktvzs" name="NEIN" sourceRef="ExclusiveGateway_1n19dv9" targetRef="ExclusiveGateway_1hnx72n" />
@@ -216,7 +203,7 @@
       <bpmn:incoming>SequenceFlow_0nmi5uq</bpmn:incoming>
       <bpmn:terminateEventDefinition />
     </bpmn:endEvent>
-    <bpmn:exclusiveGateway id="ExclusiveGateway_029mbcz" name="Kolloqium mindestens als ausreichend bewertet?">
+    <bpmn:exclusiveGateway id="ExclusiveGateway_029mbcz" name="Kolloquium mindestens als ausreichend bewertet?">
       <bpmn:incoming>SequenceFlow_05vhm1l</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1k9d9c4</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_0nxkgzz</bpmn:outgoing>
@@ -227,7 +214,7 @@
     <bpmn:endEvent id="EndEvent_0x039r8" name="Abschlussprüfung bestanden">
       <bpmn:incoming>SequenceFlow_1k9d9c4</bpmn:incoming>
     </bpmn:endEvent>
-    <bpmn:exclusiveGateway id="ExclusiveGateway_03ou1fh" name="Wurde Antrag auf Zulassung zum Kolloqium bereits gestellt?">
+    <bpmn:exclusiveGateway id="ExclusiveGateway_03ou1fh" name="Wurde Antrag auf Zulassung zum Kolloquium bereits gestellt?">
       <bpmn:incoming>SequenceFlow_1m41mdc</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1uwvn35</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_0n5kz29</bpmn:outgoing>
@@ -262,7 +249,7 @@
       <bpmn:incoming>SequenceFlow_006r0v8</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1m0nazv</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:manualTask id="Task_0w0phng" name="Student über bewertung informieren">
+    <bpmn:manualTask id="Task_0w0phng" name="Student über Bewertung informieren">
       <bpmn:incoming>SequenceFlow_1m0nazv</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1m41mdc</bpmn:outgoing>
     </bpmn:manualTask>
@@ -279,11 +266,11 @@
       <bpmn:incoming>SequenceFlow_05c0lbs</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0prapg6</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:manualTask id="Task_0r0owul" name="Kolloqium durchführen">
+    <bpmn:manualTask id="Task_0r0owul" name="Kolloquium durchführen">
       <bpmn:incoming>SequenceFlow_0prapg6</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1nfhpkv</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:manualTask id="Task_06rnkfs" name="Kolloqium bewerten">
+    <bpmn:manualTask id="Task_06rnkfs" name="Kolloquium bewerten">
       <bpmn:incoming>SequenceFlow_1nfhpkv</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1v13bit</bpmn:outgoing>
     </bpmn:manualTask>
@@ -295,7 +282,7 @@
       <bpmn:incoming>SequenceFlow_0201skx</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1uzqkfv</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:manualTask id="Task_08lzicp" name="Student über bewertung informieren">
+    <bpmn:manualTask id="Task_08lzicp" name="Student über Bewertung informieren">
       <bpmn:incoming>SequenceFlow_1uzqkfv</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_05vhm1l</bpmn:outgoing>
     </bpmn:manualTask>
@@ -326,27 +313,11 @@
     <bpmn:sequenceFlow id="SequenceFlow_1v13bit" sourceRef="Task_06rnkfs" targetRef="Task_02wvw0w" />
     <bpmn:sequenceFlow id="SequenceFlow_0201skx" sourceRef="Task_02wvw0w" targetRef="Task_0sw493c" />
     <bpmn:sequenceFlow id="SequenceFlow_1uzqkfv" sourceRef="Task_0sw493c" targetRef="Task_08lzicp" />
-    <bpmn:task id="Task_0tultsb" name="Bachelorarbeit schreiben">
-      <bpmn:incoming>SequenceFlow_142esrq</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_0zjt92q</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:boundaryEvent id="BoundaryEvent_1ewdrdx" name="9 Wochen" attachedToRef="Task_0tultsb">
-      <bpmn:outgoing>SequenceFlow_1attj93</bpmn:outgoing>
-      <bpmn:timerEventDefinition id="TimerEventDefinition_0zl7wq7" />
-    </bpmn:boundaryEvent>
     <bpmn:exclusiveGateway id="ExclusiveGateway_1n19dv9" name="Zeitraum verlängern?">
       <bpmn:incoming>SequenceFlow_0zjt92q</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1fatxs3</bpmn:outgoing>
       <bpmn:outgoing>SequenceFlow_07ktvzs</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:task id="Task_1thzjrx" name="Antrag für Verlängerung stellen">
-      <bpmn:incoming>SequenceFlow_1fatxs3</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1u1o2vj</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Task_0gsj03c" name="Antrag für Verlängerung überprüfen">
-      <bpmn:incoming>SequenceFlow_1u1o2vj</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_14u2f73</bpmn:outgoing>
-    </bpmn:task>
     <bpmn:exclusiveGateway id="ExclusiveGateway_00aq93m" name="Wurde Arbeit schon verlängert?">
       <bpmn:incoming>SequenceFlow_14u2f73</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1qnhqbg</bpmn:outgoing>
@@ -358,17 +329,46 @@
       <bpmn:outgoing>SequenceFlow_1d4odx1</bpmn:outgoing>
     </bpmn:exclusiveGateway>
     <bpmn:sequenceFlow id="SequenceFlow_142esrq" sourceRef="Task_1qlok2f" targetRef="Task_0tultsb" />
-    <bpmn:task id="Task_0pktsvx" name="Student über die Genehmigung der Verlängerung informieren">
+    <bpmn:sequenceFlow id="SequenceFlow_13c1et2" sourceRef="Task_0lu2ibh" targetRef="Task_17ey0rl" />
+    <bpmn:manualTask id="Task_1thzjrx" name="Antrag für Verlängerung stellen">
+      <bpmn:incoming>SequenceFlow_1fatxs3</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1u1o2vj</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Task_0gsj03c" name="Antrag für Verlängerung überprüfen">
+      <bpmn:incoming>SequenceFlow_1u1o2vj</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_14u2f73</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Task_0pktsvx" name="Student über die Genehmigung der Verlängerung informieren">
       <bpmn:incoming>SequenceFlow_00q8wo3</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1lgsb6e</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:task id="Task_1hrs6fc" name="Student über die Ablehung der Verlängerung informieren">
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Task_1hrs6fc" name="Student über die Ablehung der Verlängerung informieren">
       <bpmn:incoming>SequenceFlow_1qnhqbg</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0pa3hep</bpmn:outgoing>
-    </bpmn:task>
-    <bpmn:sequenceFlow id="SequenceFlow_13c1et2" sourceRef="Task_0lu2ibh" targetRef="Task_17ey0rl" />
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Task_0ca4ag0" name="Weiter an der Bachelorarbeit schreiben">
+      <bpmn:incoming>SequenceFlow_1d4odx1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0rdawhk</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:boundaryEvent id="BoundaryEvent_1lkcpri" name="Max. 4 Wochen" attachedToRef="Task_0ca4ag0">
+      <bpmn:outgoing>SequenceFlow_1clzdao</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_0nqqyrg" />
+    </bpmn:boundaryEvent>
+    <bpmn:manualTask id="Task_0lu2ibh" name="Bachelorarbeit abgeben">
+      <bpmn:incoming>SequenceFlow_1attj93</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_13z8xfw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_13c1et2</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:manualTask id="Task_0tultsb" name="Bachelorarbeit schreiben">
+      <bpmn:incoming>SequenceFlow_142esrq</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0zjt92q</bpmn:outgoing>
+    </bpmn:manualTask>
+    <bpmn:boundaryEvent id="BoundaryEvent_1ewdrdx" name="9 Wochen" attachedToRef="Task_0tultsb">
+      <bpmn:outgoing>SequenceFlow_1attj93</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_0zl7wq7" />
+    </bpmn:boundaryEvent>
     <bpmn:textAnnotation id="TextAnnotation_054cypm">
-      <bpmn:text>Ggf. gleichzeitiger Antrag auf Zulassung zum Kolloqium</bpmn:text>
+      <bpmn:text>Ggf. gleichzeitiger Antrag auf Zulassung zum Kolloquium</bpmn:text>
     </bpmn:textAnnotation>
     <bpmn:association id="Association_0x19km1" sourceRef="Task_0cjjgwr" targetRef="TextAnnotation_054cypm" />
     <bpmn:association id="Association_0vf5qqe" sourceRef="Task_0cjjgwr" targetRef="TextAnnotation_054cypm" />
@@ -520,20 +520,20 @@
         <di:waypoint x="768" y="881" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="TextAnnotation_054cypm_di" bpmnElement="TextAnnotation_054cypm">
-        <dc:Bounds x="693" y="8" width="335" height="82" />
+        <dc:Bounds x="693" y="8" width="334.9991565452092" height="25.641025641025642" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Association_0x19km1_di" bpmnElement="Association_0x19km1">
-        <di:waypoint x="666" y="111" />
-        <di:waypoint x="731" y="90" />
+        <di:waypoint x="666" y="105" />
+        <di:waypoint x="832" y="34" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Association_0vf5qqe_di" bpmnElement="Association_0vf5qqe">
-        <di:waypoint x="666" y="111" />
-        <di:waypoint x="731" y="90" />
+        <di:waypoint x="666" y="105" />
+        <di:waypoint x="832" y="34" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="ExclusiveGateway_03ou1fh_di" bpmnElement="ExclusiveGateway_03ou1fh" isMarkerVisible="true">
         <dc:Bounds x="3354" y="227" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="3253" y="225" width="86" height="53" />
+          <dc:Bounds x="3253" y="225" width="87" height="53" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1uwvn35_di" bpmnElement="SequenceFlow_1uwvn35">
@@ -821,37 +821,16 @@
       <bpmndi:BPMNShape id="ManualTask_07n7bac_di" bpmnElement="Task_08lzicp">
         <dc:Bounds x="4870" y="487" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_0tultsb_di" bpmnElement="Task_0tultsb">
-        <dc:Bounds x="1031" y="86" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ExclusiveGateway_1n19dv9_di" bpmnElement="ExclusiveGateway_1n19dv9" isMarkerVisible="true">
         <dc:Bounds x="1247" y="101" width="50" height="50" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1307" y="112.5" width="58" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_1thzjrx_di" bpmnElement="Task_1thzjrx">
-        <dc:Bounds x="1222" y="239" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_0ca4ag0_di" bpmnElement="Task_0ca4ag0">
-        <dc:Bounds x="1831" y="239" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_0lu2ibh_di" bpmnElement="Task_0lu2ibh">
-        <dc:Bounds x="2161" y="239" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_0gsj03c_di" bpmnElement="Task_0gsj03c">
-        <dc:Bounds x="1222" y="627" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_1hrs6fc_di" bpmnElement="Task_1hrs6fc">
-        <dc:Bounds x="1575" y="710" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Task_0pktsvx_di" bpmnElement="Task_0pktsvx">
-        <dc:Bounds x="1575" y="564" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ExclusiveGateway_00aq93m_di" bpmnElement="ExclusiveGateway_00aq93m" isMarkerVisible="true">
         <dc:Bounds x="1383" y="642" width="50" height="50" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1428" y="654.5" width="88" height="27" />
+          <dc:Bounds x="1436" y="653" width="88" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="ExclusiveGateway_1hnx72n_di" bpmnElement="ExclusiveGateway_1hnx72n" isMarkerVisible="true">
@@ -880,7 +859,7 @@
         <di:waypoint x="1272" y="151" />
         <di:waypoint x="1272" y="239" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1276" y="189" width="14" height="14" />
+          <dc:Bounds x="1277" y="189" width="13" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_07ktvzs_di" bpmnElement="SequenceFlow_07ktvzs">
@@ -911,7 +890,7 @@
         <di:waypoint x="1080" y="184" />
         <di:waypoint x="1080" y="391" />
         <di:waypoint x="2211" y="391" />
-        <di:waypoint x="2211" y="322" />
+        <di:waypoint x="2211" y="319" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_13z8xfw_di" bpmnElement="SequenceFlow_13z8xfw">
         <di:waypoint x="1906" y="131" />
@@ -927,7 +906,7 @@
         <di:waypoint x="1408" y="750" />
         <di:waypoint x="1575" y="750" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1420" y="703.5" width="14" height="14" />
+          <dc:Bounds x="1421" y="704" width="13" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_0pa3hep_di" bpmnElement="SequenceFlow_0pa3hep">
@@ -940,7 +919,7 @@
         <di:waypoint x="1408" y="604" />
         <di:waypoint x="1575" y="604" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1371" y="623.5" width="27" height="14" />
+          <dc:Bounds x="1371" y="624" width="27" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1lgsb6e_di" bpmnElement="SequenceFlow_1lgsb6e">
@@ -965,6 +944,27 @@
         <di:waypoint x="2299" y="527" />
         <di:waypoint x="2336" y="527" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ManualTask_1s36ww9_di" bpmnElement="Task_1thzjrx">
+        <dc:Bounds x="1222" y="239" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ManualTask_108igmk_di" bpmnElement="Task_0gsj03c">
+        <dc:Bounds x="1222" y="627" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ManualTask_069lcsm_di" bpmnElement="Task_0pktsvx">
+        <dc:Bounds x="1575" y="564" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ManualTask_1nmrzmn_di" bpmnElement="Task_1hrs6fc">
+        <dc:Bounds x="1575" y="710" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ManualTask_1j5sbji_di" bpmnElement="Task_0ca4ag0">
+        <dc:Bounds x="1831" y="239" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ManualTask_10jo0rn_di" bpmnElement="Task_0lu2ibh">
+        <dc:Bounds x="2161" y="239" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ManualTask_1f1qv0g_di" bpmnElement="Task_0tultsb">
+        <dc:Bounds x="1031" y="86" width="100" height="80" />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
